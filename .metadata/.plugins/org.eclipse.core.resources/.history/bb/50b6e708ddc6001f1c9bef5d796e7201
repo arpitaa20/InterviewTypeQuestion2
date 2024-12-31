@@ -1,0 +1,32 @@
+package ap.Question;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+/* " In a company 35 employees work under 1 manager. 
+ * wap to return no of dates where all employees are present in a month(1-30/1-31)."*/
+public class InterviewTypeQuestion2 {
+	
+	Set<Integer> findAllPresent(Set<Integer> absences, int days){
+		for(int day=1; day<=days; day++) {
+			if(!absences.contains(day)) {
+				System.out.println(day);
+			}
+		}
+		return absences;
+	}
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int n = sc.nextInt();
+		int days = 30;
+		
+		Set<Integer> absences = new HashSet<>();
+		InterviewTypeQuestion2 obj = new InterviewTypeQuestion2();
+        obj.findAllPresent(absences, days);
+        
+        sc.close();
+		
+	}
+
+}
